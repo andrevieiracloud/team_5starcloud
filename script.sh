@@ -2,49 +2,68 @@
 set -x
 
 clear
-echo "Digite nome do arquivo"
+echo "Digite nome do arquivo:"
 read arquivo
+
 touch "$arquivo.txt"
 
-echo "Agora vamos editar o arquivo"
+echo "Criando arquivo..."
 sleep 2
+
+echo "Abrindo o editor de arquivos..."
+sleep 2
+
 clear
 
 while true; do
     echo -e "Arquivo em uso: $arquivo.txt\n"
-    echo "1 para adicionar texto no arquivo"
-    echo "2 para sobrescrever texto"
-    echo "3 ler o arquivo"
-    echo "Digite a opção desejada"
+    echo "1 - Para adicionar texto no arquivo"
+    echo "2 - Para sobrescrever texto"
+    echo "3 - Ler o arquivo"
+    echo "Digite a opção desejada:"
     read opcao
 
 case $opcao in
-    1) echo "Digite oq será adicionado no arquivo"
+    1) echo "Digite o texto que sera adicionado:"
         read texto_ad
+
+        echo "Processando..."
+        sleep 2
+        
         echo "$texto_ad" >> "$arquivo.txt"
-        echo "Texto adicionado!"
+        
+        echo "Texto adicionado com sucesso!"
         sleep 2
         clear ;;
 
-    2) echo "Tem CERTEZA que deseja sobrescrever tudo que existe?"
-        echo "Digite S para sim e N para não"
+    2) echo "ATENCAO: Isso apagara todo o conteudo atual."
+        echo "Digite S para Confirmar e N para Cancelar"
         read  SN
-        if [ "$SN" == "S"] || [ "$SN" == "s" ]; then
-            echo "Digite o texto que sobrescreverá tudo:"
+        
+        if [ "$SN" == "S" ] || [ "$SN" == "s" ]; then
+        
+            echo "Digite o novo texto:"
             read texto_sob
-            echo "$texto_sob" > "$arquivo.txt"
-            echo "Texto sobrescrito com sucesso"
+
+            echo "Sobrescrevendo arquivo..."
             sleep 2
-            clear 
+            
+            echo "$texto_sob" > "$arquivo.txt"
+            
+            echo "Arquivo atualizado com sucesso!"
+            sleep 2
         else
-            echo "Você digitou nada"
+            echo "Operacao cancelada."
+            sleep 2
             clear
         fi  ;;
 
-    3) echo "Vamos ler o arquivo"
-        echo "Pressione ENTER para sair da leitura"
+    3) echo "Carregando conteudo do arquivo..."
         sleep 2
+        clear
+
         cat "$arquivo.txt"
+        echo "Pressione ENTER para voltar ao menu"
         read nada
         clear ;;
 
