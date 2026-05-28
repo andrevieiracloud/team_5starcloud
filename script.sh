@@ -29,7 +29,7 @@ case $opcao in
     2) echo "Tem CERTEZA que deseja sobrescrever tudo que existe?"
         echo "Digite S para sim e N para não"
         read  SN
-        if [ "$SN" == "S"] || [ "$SN" == "s" ]; then
+        if [ "$SN" == "S" ] || [ "$SN" == "s" ]; then
             echo "Digite o texto que sobrescreverá tudo:"
             read texto_sob
             echo "$texto_sob" > "$arquivo.txt"
