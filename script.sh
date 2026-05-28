@@ -20,6 +20,7 @@ while true; do
     echo "1 - Para adicionar texto no arquivo"
     echo "2 - Para sobrescrever texto"
     echo "3 - Ler o arquivo"
+    echo "4 - Sair do programa"
     echo "Digite a opção desejada:"
     read opcao
 
@@ -66,6 +67,11 @@ case $opcao in
         echo "Pressione ENTER para voltar ao menu"
         read nada
         clear ;;
+
+    4) echo "Saindo do programa..."
+        sleep 2
+        clear
+        exit 0 ;;
 
 esac
 done
