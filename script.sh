@@ -2,7 +2,9 @@
 set -x
 
 clear
+
 echo "Digite nome do arquivo:"
+sleep 2
 read arquivo
 
 touch "$arquivo.txt"
@@ -18,12 +20,17 @@ clear
 while true; do
     echo -e "Arquivo em uso: $arquivo.txt\n"
     echo "1 - Para adicionar texto no arquivo"
+    sleep 3
     echo "2 - Para sobrescrever texto"
+    sleep 3
     echo "3 - Ler o arquivo"
+    sleep 3
     echo "4 - Sair do programa"
+    sleep 3
     echo "Digite a opção desejada:"
+    sleep 3
     read opcao
-
+    
 case $opcao in
     1) echo "Digite o texto que sera adicionado:"
         read texto_ad
@@ -38,6 +45,7 @@ case $opcao in
          ;;
 
     2) echo "ATENCAO: Isso apagara todo o conteudo atual."
+        sleep 3
         echo "Digite S para Confirmar e N para Cancelar"
         read  SN
         
