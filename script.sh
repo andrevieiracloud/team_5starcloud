@@ -35,7 +35,7 @@ case $opcao in
         
         echo "Texto adicionado com sucesso!"
         sleep 2
-        clear ;;
+         ;;
 
     2) echo "ATENCAO: Isso apagara todo o conteudo atual."
         echo "Digite S para Confirmar e N para Cancelar"
@@ -66,7 +66,7 @@ case $opcao in
         cat "$arquivo.txt"
         echo "Pressione ENTER para voltar ao menu"
         read nada
-        clear ;;
+         ;;
 
     4) echo "Saindo do programa..."
         sleep 2
