@@ -83,3 +83,4 @@ case $opcao in
 
 esac
 done
+echo "eu yuri estou mechenso no codigokskskk"
