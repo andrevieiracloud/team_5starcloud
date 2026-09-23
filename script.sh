@@ -83,6 +83,7 @@ case $opcao in
 
 esac
 done
+echo "eu Victor estou alterando o codigo"
 echo "eu yuri estou mechenso no codigokskskk"
 echo "eu abel estou alterando o codigo"
 echo "eu andre estou modificando o codigo..."
